@@ -1,0 +1,115 @@
+$mainColor: #3E9CDC;
+.header {
+    background-image: url('./images/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 850px;
+    &__title {
+        margin: 103px 0 80px;
+        h1 {
+            font-family: 'Lato-Bold';
+            font-size: 48px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &_cBlue {
+        color: $mainColor;
+    }
+    &_dsBlock {
+        display: block;
+    }
+    &__content {
+        color: #000;
+        font-size: 20px;
+        margin: 0 0 80px;
+        &_bold {
+            font-family: 'Lato-Bold';
+            margin: 0 0 10px;
+        }
+        ul {
+            padding: 0 0 0 15px;
+            margin: 0;
+            list-style: '- ';
+        }
+        li {
+
+        }
+    }
+    &__buttons {
+        a {
+            font-size: 13px;
+            color: #fff;
+            background: $mainColor;
+            padding: 15px;
+            width: 183px;
+            text-align: center;
+            margin-right: 30px;
+            display: inline-block;
+            border-radius: 4px;
+            border: 1px solid #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all .5s;
+        }
+        a:hover {
+            background: #43ABF0;
+        }
+        a.buttonReadMore {
+            background: #fff;
+            margin: 0;
+            color: #2A2B30;
+            border: 1px solid #6F6D7B;
+            transition: all .5s;        
+        }
+        a.buttonReadMore:hover {
+            background: #eee;       
+        }
+    }
+}
+@media(max-width: 992px) {
+    .header {
+        h1 {
+            font-size: 46px;
+        }
+        &_dsBlock {
+            display: inline;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 0 0 50px;
+        &__title {
+            margin: 70px 0 30px;
+        }
+        h1 {
+            font-size: 37px;
+        }
+        &__content {
+            font-size: 17px;
+            margin: 0 0 50px;
+        }
+    }
+}
+@media(max-width: 550px) {
+    .header {
+        &__title {
+            margin: 50px 0 30px;
+        }
+        h1 {
+            font-size: 23px;
+        }
+        &__content {
+            margin: 0 0 30px;
+        }
+        &__buttons {
+            a {
+                width: 120px;
+            }
+        }
+    }
+}

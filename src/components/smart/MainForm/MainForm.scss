@@ -1,0 +1,299 @@
+$mainColor: #3E9CDC;
+.mainForm {
+    &__top {
+        margin: 0 0 32px;
+    }
+    &__item {
+        float: left;
+        width: 33.333%;
+        padding: 0 15px;
+    }
+    label {
+        width: 100%;
+        input:focus + .mainForm__text,
+        input:valid + .mainForm__text,
+        input:active + .mainForm__text,
+        input:focus-within + .mainForm__text,
+        input:focus-visible + .mainForm__text,
+        input:target + .mainForm__text,
+        select:focus + .mainForm__selectName,
+        select:valid + .mainForm__selectName,
+        select:checked + .mainForm__selectName {
+            position: relative;
+            top: -34px;
+            font-size: 10px;
+            background: rgba(255, 255, 255, .75);
+            display: table;
+            width: auto;
+            padding: 4px;
+            border-radius: 5px;
+        }
+    }
+    input {
+        width: 100%;
+        font-size: 18px;
+        color: #272733;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        outline: none;
+    }
+    select {
+        width: 100%;
+        font-size: 18px;
+        color: #272733;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+    }
+    select:disabled {
+        width: 100%;
+        font-size: 18px;
+        color: #272733;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+        outline: none;
+        opacity: 1;
+    }
+    select::selection {
+        background: rgba(39, 39, 51, 0.9);
+        border: 1px solid #3D4050;
+    }
+    option {
+        font-size: 18px;
+        color: #fff;
+        background: rgba(39, 39, 51, 0.9);
+    }
+    option:hover {
+        color: #42A9ED;
+        background: rgba(39, 39, 51, 0.9);
+    }
+    option[selected] {
+        color: #42A9ED;
+        background: none;
+    }
+    option:checked {
+        color: #42A9ED;
+    }
+    &__select {
+        select {
+            
+        }
+        option {
+
+        }
+    }
+    &__selectName {
+        position: relative;
+        font-size: 18px;
+        color: #272733;
+        -webkit-transition: all 0.24s ease-in-out;
+        -o-transition: all 0.24s ease-in-out;
+        transition: all 0.24s ease-in-out;
+        padding: 0;
+        line-height: 1;
+        cursor: text;
+        top: 0;
+        left: 12px;
+        margin-top: -32px;
+        display: table;
+        width: auto;
+        background: #dfdfe1;
+        height: 21px;
+        max-width: 100%;
+    }
+    &__email {
+        input {
+
+        }
+    }
+    &__name {
+        input {
+            
+        }
+    }
+    &__text {
+        position: relative;
+        font-size: 18px;
+        color: #272733;
+        -webkit-transition: all 0.24s ease-in-out;
+        -o-transition: all 0.24s ease-in-out;
+        transition: all 0.24s ease-in-out;
+        padding: 0;
+        line-height: 1;
+        cursor: text;
+        top: -14px;
+        left: 12px;
+        margin-top: -18px;
+        display: table;
+        width: auto;
+        max-width: 100%;
+    }
+    &__bottom {
+        margin: 0 0 55px;
+        .mainForm__item:first-child {
+            width: 66.666%;
+        }
+        .mainForm__item:last-child {
+            width: 33.333%;
+        }
+    }
+    &__range {
+        position: relative;
+        display: grid;
+        grid-template-areas:
+            'label label output'
+            'range range range';
+        grid-row-gap: 19px;
+        grid-column-gap: 10px;
+    }
+    &__rangeLabel {
+        font-size: 18px;
+        color: #fff;
+        grid-area: label;
+    }
+    &__rangeInner {
+        position: relative;
+        padding-top: 35px;
+        margin: 5px 0 0;
+    }
+    .mainForm__rangeInput {
+        width: 100%;
+        height: 7px;
+        margin: 0;
+        border-radius: 3px;
+        appearance: none;
+        background: rgba(255, 255, 255, 0.7);
+        border: 0;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+        padding: 0;
+        grid-area: range;
+    }
+    .mainForm__rangeInput::-webkit-slider-thumb {
+        width: 26px;
+        height: 26px;
+        appearance: none;
+        background: #42A9ED;
+        border: 3px solid #286690;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+    .mainForm__rangeInput::-moz-range-thumb {
+        width: 26px;
+        height: 26px;
+        appearance: none;
+        background: #42A9ED;
+        border: 3px solid #286690;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+    &__rangeOutputText {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: 'Lato-SemiBold';
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.85);
+    }
+    &__rangeOutput {
+        font-family: "Lato-SemiBold";
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.85);
+        grid-area: output;
+        text-align: right;
+    }
+    .myfile {
+        background-color: #fff;
+        padding: 10px;
+        border: 2px solid $mainColor;
+        border-radius: 3px;
+        cursor: pointer;
+        &__label {
+            width: 100%;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            img {
+                height: 23px;
+                display: inline-table;
+                vertical-align: middle;
+                margin: 0 10px 0 0;
+            }
+            span {
+                position: relative;
+                font-family: 'Lato-SemiBold';
+                font-size: 15px;
+                line-height: 18px;
+                text-transform: uppercase;
+                color: #272733;
+                top: 1px;
+            }
+        }
+        &__input {
+            display: none;
+        }
+    }
+    &__submitBlock {
+        input {
+            width: 100%;
+            max-width: 370px;
+            margin: auto;
+            display: block;
+            padding: 15px 10px;
+            background: $mainColor;
+            border: 1px solid #FFFFFF;
+            border-radius: 4px;
+            font-family: 'Lato-SemiBold';
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover {
+                background: #43ABF0;
+            }
+        }
+    }
+}
+@media(max-width: 992px) {
+    .mainForm {
+        &__submitBlock {
+            input {
+                width: auto;
+                padding: 15px 50px;
+            }
+        }
+    }
+}
+@media(max-width: 768px) {
+    .mainForm {
+        &__top {
+            margin: 0;
+        }
+        &__item {
+            float: none;
+            width: 100%;
+            padding: 0 15px;
+            max-width: 350px;
+            margin: 0 auto 30px;
+        }
+        &__bottom {
+            margin: 0 0 25px;
+            .mainForm__item:first-child {
+                width: 100%;
+            }
+            .mainForm__item:last-child {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    }
+}

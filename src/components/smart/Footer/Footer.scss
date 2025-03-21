@@ -1,0 +1,152 @@
+.footer {
+    background: #3D4050;
+    padding: 25px 0;
+    &__content {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+    &__item {
+        display: grid;
+        width: 100%;
+        align-items: center;
+    }
+    &__item:nth-child(2)::before {
+        content: '';
+        height: 18px;
+        width: 1px;
+        background-color: #c3c3c3;
+    }
+    &__item:nth-child(2)::after {
+        content: '';
+        height: 18px;
+        width: 1px;
+        background-color: #c3c3c3;
+    }
+    &__item:nth-child(2) {
+        grid-template-columns: 1% 32.6% 32.6% 32.6% 1%;
+        text-align: center;
+    }
+    &__item:nth-child(3) {
+        grid-template-columns: 55% 45%;
+        text-align: right;
+    }
+    &__elem {
+        font-size: 13px;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+            .footer__name {
+                color: #fff;
+            }
+        }
+    }
+    &__image {
+        display: inline-table;
+        vertical-align: middle;
+        margin: 0 12px 0 0;
+        img {
+            height: 20px;
+            vertical-align: middle;
+        }
+    }
+    &__name {
+        font-size: 13px;
+        color: #C3C3C3;
+        transition: all .5s;
+        vertical-align: middle;
+    }
+}
+@media(max-width: 1200px) {
+    .footer {
+        &__image {
+            margin: 0 5px 0 0;
+        }
+    }
+}
+@media(max-width: 992px) {
+    .footer {
+        &__content {
+            grid-template-areas:
+                "year year year"
+                "wallets wallets social";
+            grid-template-columns: auto;
+            row-gap: 25px;
+            text-align: center;
+        }
+        &__item {
+            margin: auto;
+        }
+        &__item:nth-child(1) {
+            grid-area: year;
+        }
+        &__item:nth-child(2) {
+            grid-area: wallets;
+            grid-template-columns: 33% 33% 33% 1%;
+            text-align: left;
+        }
+        &__item:nth-child(2)::before {
+            display: none;
+        }
+        &__item:nth-child(3) {
+            grid-area: social;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .footer {
+        &__content {
+            grid-template-areas:
+                "year year year"
+                "wallets wallets wallets"
+                "social social social";
+        }
+        &__item:nth-child(2) {
+            grid-template-columns: 33.333% 33.333% 33.333%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, .25);
+            border-bottom: 1px solid rgba(255, 255, 255, .25);
+            padding: 20px 0;
+        }
+        &__item:nth-child(2)::after {
+            display: none;
+        }
+        &__item:nth-child(3) {
+            text-align: center;
+        }
+    }
+}
+@media(max-width: 460px) {
+    .footer {
+        &__content {
+            row-gap: 0;
+        }
+        &__item:nth-child(1) {
+            .footer__elem {
+                padding: 10px 0 20px;
+            }
+        }
+        &__item:nth-child(2) {
+            grid-template-columns: 100%;
+            border-top: 0px solid rgba(255, 255, 255, .25);
+            border-bottom: 0px solid rgba(255, 255, 255, .25);
+            padding: 0;
+            .footer__elem {
+                //border-top: 1px solid rgba(255, 255, 255, .12);
+                padding: 10px 0;
+                width: 100%;
+                max-width: 250px;
+                margin: auto;
+            }
+        }
+        &__item:nth-child(3) {
+            grid-template-columns: 100%;
+            .footer__elem {
+                //border-top: 1px solid rgba(255, 255, 255, .12);
+                padding: 10px 0;
+                width: 100%;
+                max-width: 250px;
+                margin: auto;
+            }
+        }
+    }
+}

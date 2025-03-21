@@ -1,0 +1,55 @@
+$mainColor: #3E9CDC;
+.makingAnOrder {
+    background-image: url('./images/mapFon.png');
+    background-color: #272733;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 120px 0 150px;
+    &__content {
+        position: relative;
+    }
+    &__title {
+        font-family: 'Lato-Black';
+        color: #fff;
+        font-size: 36px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 0 30px;
+    }
+    &__text {
+        font-size: 18px;
+        color: #BBBBBB;
+        margin: 0 0 87px;
+        text-align: center;
+    }
+    &__scheme {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 80px;
+    }
+    &_cBlue {
+        color: $mainColor;
+    }
+}
+@media(max-width: 992px) {
+    .makingAnOrder {
+        &__scheme {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            row-gap: 30px;
+        }
+    }
+}
+@media(max-width: 460px) {
+    .makingAnOrder {
+        padding: 70px 0;
+        &__text {
+            margin: 0 0 50px;
+        }
+        &__scheme {
+            grid-template-columns: 100%;
+        }
+    }
+}

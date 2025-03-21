@@ -1,0 +1,48 @@
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: white;
+    font-family: 'Lato-Regular';
+    margin: 0;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 15px;
+}
+.container:before, .container:after {
+    display: table;
+    content: " ";
+}
+.container:after {
+    clear: both;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row:before, .row:after {
+    display: table;
+    content: " ";
+}
+.row:after {
+    clear: both;
+}
+$mainColor: #3E9CDC;
